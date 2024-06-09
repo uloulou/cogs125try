@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cogs125try/static/css/main.96495ecf.css",
+    "main.js": "/cogs125try/static/js/main.5705ff45.js",
+    "index.html": "/cogs125try/index.html",
+    "main.96495ecf.css.map": "/cogs125try/static/css/main.96495ecf.css.map",
+    "main.5705ff45.js.map": "/cogs125try/static/js/main.5705ff45.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96495ecf.css",
+    "static/js/main.5705ff45.js"
+  ]
+}
