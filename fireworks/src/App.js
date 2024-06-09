@@ -1,5 +1,10 @@
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
+import React, {useEffect, useState} from "react";
+import Particles, {initParticlesEngine} from "@tsparticles/react";
+import {loadFull} from "tsparticles";
+//import logo from "./logo.svg";
+import "./App.css";
+import particlesOptions from "./particles.json";
+//import Particles from "react-particles";
 import "./index.css";
 
 export default function App() {
@@ -17,7 +22,6 @@ export default function App() {
     },
     fpsLimit: 60,
     emitters: {
-
       life: {
         count: 0,
         duration: 0.1,
@@ -87,7 +91,7 @@ export default function App() {
           },
           particles: {
             color: {
-              value: ["#792BB2", "#2E42CB", "#F75781", "#E365E4", "#FA5348"]
+              value: ["#FF0000", "#FFD700", "#00FF00", "#00BFFF", "#FF1493"]
             },
             stroke: {
               width: 0
@@ -113,7 +117,7 @@ export default function App() {
               type: "circle"
             },
             size: {
-              value: { min: 2, max: 5 },
+              value: { min: 2, max: 3 },
               animation: {
                 enable: false
               }
