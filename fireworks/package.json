@@ -1,7 +1,7 @@
 {
   "name": "fireworks",
   "version": "0.1.0",
-  "homepage": "https://uloulou.github.io/cogs125try"
+  "homepage": "https://uloulou.github.io/cogs125try",
   "private": true,
   "dependencies": {
     "@tsparticles/engine": "^3.4.0",
