@@ -40,9 +40,8 @@ const text = {
 
 const source = {
   position: "relative",
-  right: "50%",
   left: "50%",
-  bottom: 50
+  transform: "translate(-50%, calc(100% + 10px))" 
 };
 
 const clickCountText = {
@@ -62,15 +61,13 @@ const bigExplodeProps = {
 };
 
 function App() {
-  const [isExploding, setIsExploding] = useState(false);
-  const [clickCount, setClickCount] = useState(0);
+  const [isExploding, setIsExploding] = React.useState(false);
+  console.log(1);
+  const [clickCount, setClickCount] = React.useState(0);
 
   const handleClick = () => {
-    setIsExploding(true);
+    setIsExploding(!isExploding);
     setClickCount(clickCount + 1);
-    setTimeout(() => {
-      setIsExploding(false);
-    }, bigExplodeProps.duration);
   };
 
   return (
