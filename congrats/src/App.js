@@ -39,14 +39,10 @@ const text = {
 };
 
 const source = {
-  // position: "absolute",
-  // right: "50%",
-  // left: "50%",
-  // bottom: 50
-  position: "absolute",
+  position: "relative",
+  right: "50%",
   left: "50%",
-  bottom: 50,
-  transform: "translateX(-50%)"
+  bottom: 50
 };
 
 const clickCountText = {
@@ -72,6 +68,9 @@ function App() {
   const handleClick = () => {
     setIsExploding(true);
     setClickCount(clickCount + 1);
+    setTimeout(() => {
+      setIsExploding(false);
+    }, bigExplodeProps.duration);
   };
 
   return (
