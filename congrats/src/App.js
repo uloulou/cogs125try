@@ -41,7 +41,7 @@ const text = {
 const source = {
   position: "relative",
   left: "50%",
-  transform: "translate(-50%, calc(100% + 20px))" 
+  transform: "translate(-50%, calc(100% + 30px))" 
 };
 
 const clickCountText = {
@@ -56,8 +56,8 @@ const bigExplodeProps = {
   force: 0.6,
   duration: 5000,
   particleCount: 200,
-  floorHeight: 3200,
-  floorWidth: 3200
+  floorHeight: 1600,
+  floorWidth: 1600
 };
 
 function App() {
