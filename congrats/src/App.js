@@ -34,7 +34,8 @@ const text = {
   color: "white",
   fontFamily: "sans-serif",
   fontSize: "24px",
-  textAlign: "center"
+  textAlign: "center",
+  fontWeight: "bold"
 };
 
 const source = {
@@ -91,7 +92,7 @@ function App() {
         Congrats!
       </button>
       <div style={clickCountText}>
-        Click: {clickCount} {clickCount === 1 ? "time" : "times"}
+        Congrats: {clickCount} {clickCount === 1 ? "time" : "times"}
       </div>
     </div>
   );
