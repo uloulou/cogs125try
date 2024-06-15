@@ -56,8 +56,8 @@ const bigExplodeProps = {
   force: 0.6,
   duration: 5000,
   particleCount: 200,
-  floorHeight: window.innerHeight,
-  floorWidth: window.innerWidth
+  floorHeight: 3000,
+  floorWidth: 3000
 };
 
 function App() {
@@ -66,12 +66,12 @@ function App() {
   const [clickCount, setClickCount] = React.useState(0);
 
   const handleClick = () => {
-    setIsExploding(!isExploding);
-  };
-
-  const handleClickCount = () => {
     setClickCount(clickCount + 1);
-  };
+    setIsExploding(true);
+    setTimeout(() => {
+      setIsExploding(false);
+    }, bigExplodeProps.duration);
+  }
 
   return (
     <div style={container}>
@@ -90,7 +90,7 @@ function App() {
         )}
         Congrats!
       </button>
-      <div style={clickCountText} onClick={handleClickCount}>
+      <div style={clickCountText}>
         Congrats: {clickCount} {clickCount === 1 ? "time" : "times"}
       </div>
     </div>
