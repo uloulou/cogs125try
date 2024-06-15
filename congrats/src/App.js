@@ -1,34 +1,5 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-
-//   );
-// }
-
-// export default App;
-
 import React, { useState } from "react";
-import { createRoot } from "react-dom/client";
 import ConfettiExplosion from "react-confetti-explosion";
-import logo from './logo.svg';
 import './App.css';
 
 const container = {
@@ -47,7 +18,7 @@ const container = {
 const button = {
   padding: "20px 40px",
   color: "black",
-  backgroundColor: "#FFBFF0",
+  backgroundColor: "#FFBF00",
   fontFamily: "Helvetica Neue",
   textTransform: "uppercase",
   letterSpacing: 1,
@@ -67,10 +38,14 @@ const text = {
 };
 
 const source = {
+  // position: "absolute",
+  // right: "50%",
+  // left: "50%",
+  // bottom: 50
   position: "absolute",
-  right: "50%",
   left: "50%",
-  bottom: 50
+  bottom: 50,
+  transform: "translateX(-50%)"
 };
 
 const clickCountText = {
@@ -94,7 +69,7 @@ function App() {
   const [clickCount, setClickCount] = useState(0);
 
   const handleClick = () => {
-    setIsExploding(!isExploding);
+    setIsExploding(true);
     setClickCount(clickCount + 1);
   };
 
