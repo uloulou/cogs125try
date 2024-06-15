@@ -55,7 +55,7 @@ const clickCountText = {
 const bigExplodeProps = {
   force: 0.6,
   duration: 5000,
-  particleCount: 300,
+  particleCount: 200,
   floorHeight: 2400,
   floorWidth: 2400
 };
