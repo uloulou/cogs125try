@@ -56,8 +56,8 @@ const bigExplodeProps = {
   force: 0.6,
   duration: 5000,
   particleCount: 200,
-  floorHeight: 3000,
-  floorWidth: 3000
+  floorHeight: 3200,
+  floorWidth: 3200
 };
 
 function App() {
@@ -66,12 +66,13 @@ function App() {
   const [clickCount, setClickCount] = React.useState(0);
 
   const handleClick = () => {
-    setClickCount(clickCount + 1);
     setIsExploding(true);
-    setTimeout(() => {
-      setIsExploding(false);
-    }, bigExplodeProps.duration);
   }
+
+  const handleCount = () => {
+    setIsExploding(false);
+    setClickCount(clickCount + 1);
+  };
 
   return (
     <div style={container}>
@@ -85,7 +86,11 @@ function App() {
       >
         {isExploding && (
           <div style={source}>
-            <ConfettiExplosion {...bigExplodeProps} />
+            {/* <ConfettiExplosion {...bigExplodeProps} /> */}
+            <ConfettiExplosion
+              {...bigExplodeProps}
+             onAnimationEnd={handleCount}
+            />
           </div>
         )}
         Congrats!
